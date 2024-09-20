@@ -1,0 +1,208 @@
+/* 전체적인 레이아웃 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ff6347;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    display: none;
+    margin: 2em auto;
+    padding: 1em;
+    width: 80%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.active {
+    display: block;
+}
+
+/* 카테고리 섹션 스타일 */
+.menu-container {
+    display: flex;
+}
+
+.categories {
+    width: 20%;
+    padding-right: 20px;
+}
+
+.categories h3 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.category-item {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.category-item:hover {
+    background-color: #ff6347;
+    color: white;
+}
+
+.category-item.active {
+    background-color: #ff6347;
+    color: white;
+}
+
+.category-item span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+}
+
+/* 메뉴 아이템 리스트 스타일 */
+.menu-items {
+    width: 75%;
+    padding-left: 20px;
+    background-color: #fff;
+    border-left: 2px solid #ddd;
+}
+
+.menu-items div {
+    margin-bottom: 20px;
+}
+
+.item-actions {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.item-actions button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-actions button:hover {
+    background-color: #0056b3;
+}
+
+.quantityDisplay {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* 이미지 관련 스타일 */
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.menu-item-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0; /* 이미지 로드 실패 시 배경 */
+}
+
+/* 카트 요약 스타일 */
+.cart-summary {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-details {
+    font-size: 16px;
+}
+
+.checkout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+/* 관리자 섹션 스타일 */
+#admin-category-form,
+#admin-menu-form {
+    margin-top: 20px;
+}
+
+#admin-category-form input,
+#admin-menu-form input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#admin-category-form button,
+#admin-menu-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#admin-category-form button:hover,
+#admin-menu-form button:hover {
+    background-color: #0056b3;
+}
