@@ -19,7 +19,7 @@ const config = {
     authentication: {
         type: 'ntlm',  // Windows 인증 사용
         options: {
-            domain: "WORKGROUP",  // 도메인 이름 (도메인이 없으면 이 줄은 생략 가능)
+            domain: "https://dongyoon102600.github.io/restaurant-project/",  // 도메인 이름 (도메인이 없으면 이 줄은 생략 가능)
             userName: "이동윤",  // Windows 사용자 이름
             password: '12qwasZX!@'  // Windows 사용자 비밀번호 (도메인이 없는 로컬 사용자일 경우 필요 없음)
         }
