@@ -7,11 +7,11 @@ const corsOptions = {
     optionsSuccessStatus: 200 // 일부 브라우저에서 문제 해결을 위한 상태 코드
 };
 
-app.use(cors(corsOptions));
+
 
 // Express 앱 설정
 const app = express();
-app.use(cors()); // CORS 정책 허용
+app.use(cors(corsOptions)); // CORS 정책 허용
 app.use(bodyParser.json()); // JSON 데이터 파싱
 
 // SQL Server 연결 설정 (SQL 인증 사용)
