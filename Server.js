@@ -8,24 +8,22 @@ const app = express();
 app.use(cors()); // CORS 정책 허용
 app.use(bodyParser.json()); // JSON 데이터 파싱
 
-// SQL Server 연결 설정
+// SQL Server 연결 설정 (SQL 인증 사용)
 const config = {
-    server: 'localhost', // SQL Server 주소
+    server: '192.168.150.110', // 예: 'localhost' 또는 '서버 IP'
     database: 'rastaurant',  // 사용할 데이터베이스 이름
     options: {
-        encrypt: false, // 암호화 옵션이 필요한 경우
+        encrypt: false, // 암호화가 필요한 경우 true
         enableArithAbort: true
     },
     authentication: {
-        type: 'ntlm',  // Windows 인증 사용
+        type: 'default',  // SQL 인증 방식
         options: {
-            domain: "https://dongyoon102600.github.io/restaurant-project/",  // 도메인 이름 (도메인이 없으면 이 줄은 생략 가능)
-            userName: "이동윤",  // Windows 사용자 이름
-            password: '12qwasZX!@'  // Windows 사용자 비밀번호 (도메인이 없는 로컬 사용자일 경우 필요 없음)
+            userName: 'dongyoon',  // SQL 로그인 이름
+            password: '12qwasZX!@'  // SQL 로그인 비밀번호
         }
     }
 };
-
 
 // SQL 연결
 sql.connect(config, err => {
@@ -57,7 +55,6 @@ app.post('/api/order', async (req, res) => {
         res.status(500).json({ error: '주문 저장 중 오류가 발생했습니다.' });
     }
 });
-
 
 // 서버 실행
 const port = 4000;
