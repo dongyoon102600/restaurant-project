@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const sql = require('mssql');
 const corsOptions = {
-    origin: 'http://www.ddagjoa.shop', // 허용할 도메인
+    origin: 'ddagjoa.shop', // 허용할 도메인
     optionsSuccessStatus: 200 // 일부 브라우저에서 문제 해결을 위한 상태 코드
 };
 
@@ -25,7 +25,7 @@ const config = {
     authentication: {
         type: 'default',  // Windows 인증 사용
         options: {
-            domain: 'www.ddagjoa.shop',  // 도메인 이름 (도메인이 없으면 이 줄은 생략 가능)
+            domain: 'ddagjoa.shop',  // 도메인 이름 (도메인이 없으면 이 줄은 생략 가능)
             userName: 'dongyoon',  // Windows 사용자 이름
             password: '12qwasZX!@'  // Windows 사용자 비밀번호 (도메인이 없는 로컬 사용자일 경우 필요 없음)
         }
