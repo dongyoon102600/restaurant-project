@@ -10,17 +10,18 @@ app.use(bodyParser.json()); // JSON 데이터 파싱
 
 // SQL Server 연결 설정 (SQL 인증 사용)
 const config = {
-    server: 'ddagjoa.shop', // 예: 'localhost' 또는 '서버 IP'
+    server: '192.168.150.110', // SQL Server 주소
     database: 'rastaurant',  // 사용할 데이터베이스 이름
     options: {
-        encrypt: false, // 암호화가 필요한 경우 true
+        encrypt: false, // 암호화 옵션이 필요한 경우
         enableArithAbort: true
     },
     authentication: {
-        type: 'default',  // SQL 인증 방식
+        type: 'default',  // Windows 인증 사용
         options: {
-            userName: 'dongyoon',  // SQL 로그인 이름
-            password: '12qwasZX!@'  // SQL 로그인 비밀번호
+            domain: 'ddagjoa.shop',  // 도메인 이름 (도메인이 없으면 이 줄은 생략 가능)
+            userName: 'dongyoon',  // Windows 사용자 이름
+            password: '12qwasZX!@'  // Windows 사용자 비밀번호 (도메인이 없는 로컬 사용자일 경우 필요 없음)
         }
     }
 };
