@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         // 서버로 주문 정보 전송
-        fetch('http://localhost:4000/api/order', {
+        fetch('http://192.168.150.110:4000/api/order', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
