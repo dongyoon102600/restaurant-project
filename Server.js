@@ -2,6 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const sql = require('mssql');
+const corsOptions = {
+    origin: 'http://www.ddagjoa.shop', // 허용할 도메인
+    optionsSuccessStatus: 200 // 일부 브라우저에서 문제 해결을 위한 상태 코드
+};
+
+app.use(cors(corsOptions));
 
 // Express 앱 설정
 const app = express();
