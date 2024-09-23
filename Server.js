@@ -10,7 +10,7 @@ app.use(bodyParser.json()); // JSON 데이터 파싱
 
 // SQL Server 연결 설정 (SQL 인증 사용)
 const config = {
-    server: '192.168.150.110', // 예: 'localhost' 또는 '서버 IP'
+    server: 'ddagjoa.shop', // 예: 'localhost' 또는 '서버 IP'
     database: 'rastaurant',  // 사용할 데이터베이스 이름
     options: {
         encrypt: false, // 암호화가 필요한 경우 true
